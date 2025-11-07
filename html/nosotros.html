@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - CEA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/chatbot.css">
+    <script src="../js/chatbot.js"></script>
+</head>
+<div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>Asistente CEA</h3>
+            <button id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                <p>¡Hola! 👋 Soy el asistente virtual de CEA. ¿En qué puedo ayudarte hoy?</p>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+            <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CEA</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html" style="font-weight: bold; text-decoration: underline;">Nosotros</a></li>
+                <li><a href="Proyectos.html">Proyectos</a></li>
+                <li><a href="Recursos.html">Recursos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sub-header header-nosotros">
+        <h1>Quiénes Somos</h1>
+    </section>
+
+    <section class="events-section" style="margin-top: 0;">
+        <h2 class="section-title">Nuestra Misión</h2>
+        <p style="line-height: 1.6; color: #555; margin-bottom: 20px;">
+            El <strong>Centro Educativo Ambiental (CEA)</strong> es una iniciativa ubicada en el corazón del Parque
+            O'Higgins, dependiente de la Dirección de Medio Ambiente de Santiago.
+        </p>
+        <p style="line-height: 1.6; color: #555;">
+            Nuestra misión es fomentar la <strong>conciencia ecológica</strong> en la comunidad a través de la educación
+            práctica. Nos enfocamos en promover la economía circular, la biodiversidad urbana y la agricultura
+            sostenible mediante talleres gratuitos, operativos de reciclaje y la recuperación de espacios verdes para
+            todos los vecinos y vecinas de Santiago.
+        </p>
+    </section>
+
+    <div class="floating-chat"><i class="fas fa-comments"></i></div>
+    <div class="chat-window" id="chatWindow"></div>
+    <script src="../JS/main.js"></script>
+</body>
+
+</html>

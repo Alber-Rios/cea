@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - CEA</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/chatbot.css">
+    <script src="../js/chatbot.js"></script>
+</head>
+
+<body>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>Asistente CEA</h3>
+            <button id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+            <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">CEA</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="Proyectos.html" style="font-weight: bold; text-decoration: underline;">Proyectos</a></li>
+                <li><a href="Recursos.html">Recursos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sub-header header-proyectos">
+        <h1>Nuestros Proyectos</h1>
+    </section>
+
+    <section class="cards-section" style="margin-top: 0;">
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-recycle"></i></div>
+                <h3>Santiago Recicla</h3>
+                <p>Red de puntos fijos y móviles para la gestión de vidrio, plásticos (PET 1), papeles y cartones en tu barrio.</p>
+                <button class="btn-small">VER PUNTOS</button>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-carrot"></i></div>
+                <h3>Huertos Urbanos</h3>
+                <p>Programa de agricultura comunitaria. Aprende a cultivar tus propios alimentos y plantas medicinales en casa.</p>
+                <button class="btn-small">TALLERES</button>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                <h3>Reforestación Nativa</h3>
+                <p>Recuperación de espacios degradados utilizando especies de flora nativa de la zona central.</p>
+                <button class="btn-small">VOLUNTARIADO</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-mapa" style="padding: 0 5% 50px; display: none;">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">📍 Mapa de Puntos Limpios</h2>
+        <div id="mapReciclaje" style="height: 450px; width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 1;"></div>
+    </section>
+
+    <div class="floating-chat"><i class="fas fa-comments"></i></div>
+
+    <script src="../JS/main.js"></script>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../js/map_puntoslimpios.js"></script>
+
+</body>
+</html>
