@@ -1,0 +1,36 @@
+/* Estilos para los botones de opciones */
+.chat-options {
+    display: flex;
+    flex-direction: column; /* Uno debajo del otro, como en WhatsApp */
+    gap: 8px;
+    margin: 10px 0 15px;
+    width: 80%; /* Un poco menos del ancho total */
+}
+
+.chat-option-btn {
+    background-color: #f0f7f4; /* Fondo claro */
+    color: #2e5d34; /* Texto verde oscuro */
+    border: 1px solid #82c91e; /* Borde verde lima */
+    padding: 10px 15px;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    text-align: left; /* Texto alineado a la izquierda */
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Flechita decorativa antes del texto (opcional) */
+.chat-option-btn::before {
+    content: '↪';
+    margin-right: 8px;
+    font-size: 1.1rem;
+    color: #82c91e;
+}
+
+.chat-option-btn:hover {
+    background-color: #82c91e; /* Fondo verde lima al pasar el mouse */
+    color: white; /* Texto blanco */
+    transform: translateX(5px); /* Pequeño movimiento */
+}
