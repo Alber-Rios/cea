@@ -1,0 +1,218 @@
+/* =========================================
+   TARJETAS DE INFORMACIÓN (Estilo App)
+   ========================================= */
+
+/* Contenedor General de la Tarjeta */
+.chat-event-card, 
+.chat-info-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Mantiene el contenido dentro de los bordes */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra suave */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado Verde */
+.chat-card-header {
+    background-color: #7aba48; /* Tu color verde corporativo */
+    color: #ffffff;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Cuerpo de la Tarjeta */
+.chat-card-body {
+    padding: 15px;
+    color: #444;
+}
+
+/* Títulos dentro de la tarjeta */
+.chat-event-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+/* Descripción */
+.chat-event-desc, 
+.chat-info-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* =========================================
+   LISTAS MEJORADAS (CORRECCIÓN VISUAL)
+   Esto organiza la lista de reciclaje (Emoji + Texto)
+   ========================================= */
+
+.chat-info-card ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* El contenedor de cada ítem de la lista */
+.chat-info-card li {
+    display: flex;           /* Activa Flexbox */
+    align-items: flex-start; /* Alinea el icono arriba (no centrado) */
+    gap: 12px;               /* Espacio entre el emoji y el texto */
+    padding: 12px 0;         /* Un poco más de aire vertical */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chat-info-card li:last-child {
+    border-bottom: none;
+}
+
+/* El Emoji (Icono azul, amarillo, verde) */
+.li-icon {
+    font-size: 1.2rem;       /* Emoji un poco más grande */
+    line-height: 1;
+    margin-top: 2px;         /* Ajuste fino para alinear con el título */
+    min-width: 20px;         /* Asegura que tenga espacio propio */
+}
+
+/* El bloque de texto (Título + Descripción) */
+.li-content {
+    display: flex;
+    flex-direction: column;  /* Fuerza que el texto vaya uno bajo el otro */
+}
+
+/* Título del material (Papeles, Plásticos...) */
+.li-content strong {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+/* Descripción detallada (Cajas, diarios...) */
+.li-content span {
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   BOTONES DENTRO DE LA TARJETA
+   ========================================= */
+
+.btn-inscripcion, 
+.chat-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f8e9; /* Fondo verde muy claro */
+    color: #5a8c35; /* Texto verde fuerte */
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-inscripcion:hover, 
+.chat-link:hover {
+    background-color: #7aba48;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   BOTONES DE OPCIONES (MENÚ PRINCIPAL)
+   ========================================= */
+
+/* Contenedor que agrupa los botones */
+.chat-options {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben, bajan a la siguiente línea */
+    gap: 10px;       /* Espacio entre botones */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: flex-start; /* Alineados a la izquierda */
+}
+
+/* Estilo individual del botón (Diseño Píldora) */
+.chat-option-btn {
+    background-color: #ffffff;
+    border: 1px solid #7aba48; /* Borde verde */
+    color: #7aba48;            /* Texto verde */
+    padding: 8px 18px;         /* Relleno cómodo */
+    border-radius: 50px;       /* ¡Borde totalmente redondo! */
+    font-size: 0.9rem;
+    font-weight: 600;          /* Texto un poco más grueso */
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra muy sutil */
+    
+    /* Animación de entrada para que no aparezcan de golpe */
+    animation: slideInUp 0.4s ease forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Retraso escalonado para la animación */
+.chat-option-btn:nth-child(1) { animation-delay: 0.1s; }
+.chat-option-btn:nth-child(2) { animation-delay: 0.2s; }
+.chat-option-btn:nth-child(3) { animation-delay: 0.3s; }
+.chat-option-btn:nth-child(4) { animation-delay: 0.4s; }
+
+/* Estado HOVER (Al pasar el mouse) */
+.chat-option-btn:hover {
+    background-color: #7aba48; /* Fondo se vuelve verde */
+    color: #ffffff;            /* Texto se vuelve blanco */
+    transform: translateY(-3px); /* Se levanta un poquito */
+    box-shadow: 0 5px 12px rgba(122, 186, 72, 0.4); /* Sombra verde brillante */
+}
+
+/* Estado ACTIVE (Al hacer clic) */
+.chat-option-btn:active {
+    transform: scale(0.95); /* Efecto de presionar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   🔴 CORRECCIÓN VISUAL (Listas en Mensajes Normales)
+   Esto arregla los puntos negros en el mensaje de "Disculpa..."
+   ========================================= */
+
+.message ul {
+    padding-left: 0;
+    list-style: none; /* Quita los puntos negros por defecto */
+    margin: 8px 0;
+}
+
+/* Esta regla es específica para mensajes de texto simples, no afecta a las tarjetas */
+.message:not(:has(.chat-info-card)) li {
+    margin-bottom: 6px;
+    display: flex; 
+    align-items: center;
+    gap: 6px;
+}
